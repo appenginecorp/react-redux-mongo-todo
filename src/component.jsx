@@ -1,23 +1,25 @@
 import React, {Component} from 'react';
 
-export default class MyComponent extends Component {
+class Field extends Component {
+
     constructor(props) {
         super(props);
-        this.state = {value: props.initialValue}
+        this.state = {value: props.initialValue};
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    sum(delta) {
-        this.setState({value: this.state.value + delta});
+    handleChange(event) {
+        this.setState({value: event.target.value});
     }
 
     render() {
         return (
             <div>
-                <h1>{this.props.label}</h1>
-                <h2>{this.state.value}</h2>
-                <button onClick={() => this.sum(-1)}>Dec</button>
-                <button onClick={() => this.sum(1)}>Inc</button>
+                <label>{this.state.value}</label><br/>
+                <input onChange={this.handleChange} value={this.state.value}/>
             </div>
         )
     }
 }
+
+export default Field;
