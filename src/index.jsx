@@ -1,4 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MyComponent from "./component";
 
-ReactDOM.render(<h1>Hello</h1>, document.getElementById('app'));
+ReactDOM.render(<MyComponent value="Myyyyy!"/>, document.getElementById('app'));
