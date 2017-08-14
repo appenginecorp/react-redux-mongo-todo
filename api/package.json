@@ -2,13 +2,15 @@
   "name": "api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/loader.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "api": "npm run api:dev",
+    "api:dev": "nodemon",
+    "api:prod": "pm2 start src/loader.js --name reacting-api"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Neri Bez Fontana <nerifontana@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
