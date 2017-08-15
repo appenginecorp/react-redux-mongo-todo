@@ -1,9 +1,9 @@
 {
-  "name": "reacting",
+  "name": "react-todo",
   "version": "1.0.0",
   "scripts": {
-    "server": "webpack-dev-server --progress --colors --inline --hot",
-    "server:prod": "webpack-dev-server --progress -p"
+    "server": "webpack-dev-server --config webpack.todo.config.js --progress --colors --inline --hot",
+    "server:prod": "webpack-dev-server --config webpack.todo.config.js --progress -p"
   },
   "repository": {
     "type": "git",
