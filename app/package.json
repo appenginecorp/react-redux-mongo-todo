@@ -2,14 +2,15 @@
   "name": "reacting",
   "version": "1.0.0",
   "scripts": {
-    "server": "webpack-dev-server --progress --colors --inline --hot"
+    "server": "webpack-dev-server --progress --colors --inline --hot",
+    "server:prod": "webpack-dev-server --progress -p"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nbfontana/reacting.git"
   },
   "author": "Neri Bez Fontana <nerifontana@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nbfontana/reacting/issues"
   },
