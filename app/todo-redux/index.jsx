@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {combineReducers, createStore} from 'redux';
+import App from './src/app';
+import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
-import counterReducer from './counter.reducer';
-import Counter from "./counter";
+import reducers from './src/reducers';
 
-const reducers = combineReducers({
-  counter: counterReducer
-});
+import promise from 'redux-promise';
+import multi from 'redux-multi'
+import thunk from 'redux-thunk';
+
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+const store = applyMiddleware(multi, thunk, promise)(createStore)(reducers, devTools);
 
 ReactDOM.render(
-  <Provider store={createStore(reducers)}>
-    <Counter/>
+  <Provider store={store}>
+    <App/>
   </Provider>,
   document.getElementById('app')
 );
