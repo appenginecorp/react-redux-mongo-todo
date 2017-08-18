@@ -40,3 +40,7 @@ or
 npm run server:redux
 ```
 to run the Redux version.
+
+## License
+
+MIT @ Neri Bez Fontana
