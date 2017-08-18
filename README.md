@@ -1,4 +1,4 @@
-# react-todo-app
+# react-todo-app :bookmark_tabs:	
 Two versions of a simple todo list app, one built with pure React and the other applying Redux.
 
 
