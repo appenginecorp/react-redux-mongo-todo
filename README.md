@@ -6,7 +6,7 @@ Two versions of a simple todo list app, one built with pure React and the other 
 
 First of all, make sure you have [Node](https://nodejs.org) and [Mongodb](https://www.mongodb.com/) installed in your machine. And don't forget to create the 'data/db' folder with is required by Mongo.
 
-First of all you need to initiate mongodb's service:
+After that, you need to initiate mongodb's service:
 ```
 mongod
 ```
